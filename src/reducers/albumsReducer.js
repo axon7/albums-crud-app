@@ -1,4 +1,4 @@
-import { FETCH_ALBUMS_PENDING, FETCH_ALBUMS_SUCCESS, FETCH_ALBUMS_FAILURE, DELETE_ALBUM } from "../actions/actions";
+import { FETCH_ALBUMS_PENDING, FETCH_ALBUMS_SUCCESS, FETCH_ALBUMS_FAILURE, DELETE_ALBUM, ADD_NEW_ALBUM } from "../actions/actions";
 
 const initialState = {
   data: [],
@@ -32,6 +32,11 @@ const albumsReducer = (state = initialState, action) => {
       return {
         ...state,
         data: albumsAfterDelete
+      };
+    case ADD_NEW_ALBUM:
+      return {
+        ...state,
+        data: [...state.data, action.payload]
       };
 
     default:

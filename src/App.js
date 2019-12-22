@@ -4,6 +4,7 @@ import { fetchAlbums } from "./actions/actions";
 
 import "./App.css";
 import AlbumsTable from "./containers/AlbumsTable";
+import AddAlbumForm from "./components/AddAlbumForm";
 
 const App = ({ fetchAlbums }) => {
   useEffect(() => {
@@ -16,11 +17,8 @@ const App = ({ fetchAlbums }) => {
       <header>
         <h1>Albums CRUD App</h1>
       </header>
-
+      <AddAlbumForm />
       <AlbumsTable />
-      <button type='button' onClick={() => alert("clicked")}>
-        Add
-      </button>
     </div>
   );
 };
