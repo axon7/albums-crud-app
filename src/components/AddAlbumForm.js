@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addNewAlbum } from "../actions/actions";
 
-const AddAlbumForm = ({ addNewAlbum }) => {
+const AddAlbumForm = ({ addNewAlbum, data }) => {
   const [albumTitle, setAlbumTitle] = useState({
     albumTitle: ""
   });
@@ -20,4 +20,7 @@ const AddAlbumForm = ({ addNewAlbum }) => {
   );
 };
 
-export default connect(null, { addNewAlbum })(AddAlbumForm);
+const mapStateToProps = state => ({
+  data: state.data
+});
+export default connect(mapStateToProps, { addNewAlbum })(AddAlbumForm);

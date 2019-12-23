@@ -5,6 +5,7 @@ export const FETCH_ALBUMS_SUCCESS = "FETCH_ALBUMS_SUCCESS";
 export const FETCH_ALBUMS_FAILURE = "FETCH_ALBUMS_FAILURE";
 export const DELETE_ALBUM = "DELETE_ALBUM";
 export const ADD_NEW_ALBUM = "ADD_NEW_ALBUM";
+export const UPDATE_ALBUM = "UPDATE_ALBUM";
 
 const URL = "https://jsonplaceholder.typicode.com/albums";
 
@@ -34,7 +35,7 @@ export const fetchAlbums = () => async dispatch => {
 
 export const deleteAlbum = id => async dispatch => {
   try {
-    await axios.delete(`${URL}/${id}`);
+    // await axios.delete(`${URL}/${id}`);
     await dispatch({
       type: DELETE_ALBUM,
       payload: id
@@ -46,13 +47,36 @@ export const deleteAlbum = id => async dispatch => {
 
 export const addNewAlbum = title => async dispatch => {
   try {
-    const res = await axios.post(URL, {
-      userId: 11,
-      title
-    });
+    // const res = await axios.post(URL, {
+    //   userId: 11,
+    //   title
+    // });
+
     await dispatch({
       type: ADD_NEW_ALBUM,
-      payload: res.data
+      payload: title
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const updateAlbum = (title, id, userId) => async dispatch => {
+  try {
+    // const res = await axios.put(`${URL}/${id}`, {
+    //   title,
+    //   userId
+    // });
+    // console.log(res);
+    let objToReplace = {
+      title,
+      id,
+      userId
+    };
+
+    await dispatch({
+      type: UPDATE_ALBUM,
+      payload: objToReplace
     });
   } catch (error) {
     console.log(error);
