@@ -1,0 +1,47 @@
+{
+  "week": [
+    {
+      "name": "Walter Wynne",
+      "mins": 105
+    },
+    {
+      "name": "Annabel Ferdinand",
+      "mins": 52
+    },
+    {
+      "name": "Marty McFly",
+      "mins": 50
+    },
+    {
+      "name": "You!",
+      "mins": 38,
+      "moreMins": 12,
+      "currentStreak": 4,
+      "bestStreak": 12,
+      "type": "week"
+    }
+  ],
+  "month": [
+    {
+      "name": "George Phillips",
+      "mins": 115
+    },
+    {
+      "name": "Jane Smith",
+      "mins": 62
+    },
+
+    {
+      "name": "Kate Brown",
+      "mins": 18
+    },
+    {
+      "name": "You!",
+      "mins": 12,
+      "moreMins": 186,
+      "currentStreak": 7,
+      "bestStreak": 44,
+      "type": "month"
+    }
+  ]
+}

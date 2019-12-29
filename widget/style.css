@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: black;
+  font-size: 14px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px #cfd0d1;
+  padding: 2px 10px;
+  font-weight: bold;
+  margin: 2px;
+}
+
+.wrapper {
+  background-color: white;
+  border-radius: 5px;
+  width: 380px;
+  height: 444px;
+  margin: 0 auto;
+  padding: 5px 10px;
+}
+
+#summary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 13px;
+  width: 250px;
+  height: 120px;
+  position: relative;
+}
+
+#summaryWithSVG {
+  display: flex;
+  justify-content: space-around;
+}
+
+#toAchieveGoal {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin-left: 40px;
+}
+
+#streaks {
+  display: flex;
+  flex-direction: row;
+}
+
+.streak {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 120px;
+  background-color: #f9f9fb;
+  height: 60px;
+  margin: 0 2px;
+}
+
+#streaks p {
+  text-align: center;
+  margin: 0;
+}
+
+.streakCount {
+  font-size: 16px;
+}
+
+.title {
+  color: #5496e4;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+#leaderboard {
+  margin-top: 25px;
+}
+
+#leaderboardTitleWithSelect {
+  display: flex;
+  justify-content: space-between;
+}
+
+#progressBarTotalGoal {
+  font-size: 10px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+#insideProgressBar {
+  position: absolute;
+  top: 38px;
+  left: -85px;
+  width: 60px;
+  height: 80px;
+  text-align: center;
+}
+
+#progressBarMins {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+#current {
+  font-size: 12px;
+  color: rgb(170, 170, 170);
+}
+select {
+  height: 30px;
+  border-radius: 5px;
+  width: 95px;
+  background-color: #f9f9fb;
+}
+
+li[data-name="You!"] {
+  background-color: #0dbf6d;
+  color: white;
+}
+
+svg {
+  width: 95px;
+  height: 100px;
+  transform: scaleX(-1);
+  margin-top: 10px;
+}
+
+svg path {
+  stroke-width: 15px;
+}
+
+svg path:nth-child(2) {
+  stroke-dasharray: 470, 490;
+}
